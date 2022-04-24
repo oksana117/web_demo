@@ -3,9 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let CustomerModel = require("../models/customer.js")
 let Customer = CustomerModel.CustomerSchema;
-let path = require('path');
-
-module.exports = router;
+let path = require('path')
 
 module.exports.displayCustomerList = (req, res, next) => {
     Customer.find((err, customerList) => {
@@ -90,7 +88,7 @@ module.exports.processEditPage = (req, res, next) => {
       
     });
     
-    Customer.updateOne({_id: id}, updatedCustomer, {}, (err) => {
+    Customer.updateOne({ _id: id }, updatedCustomer, (err) => {
         if(err)
         {
             console.log(err);

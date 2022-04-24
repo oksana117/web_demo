@@ -90,7 +90,7 @@ module.exports.processEditPage = (req, res, next) => {
       
     });
     
-    Customer.updateOne({_id: id}, updatedCustomer, {}, (err) => {
+    Customer.updateOne({ _id: id }, updatedCustomer, (err) => {
         if(err)
         {
             console.log(err);

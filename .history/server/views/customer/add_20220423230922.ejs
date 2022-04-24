@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1>
+    
 
             <form method="POST" class="mt-5 p-4 regForm">
                 <h3 class="text-center mb-4">Add Customer</h3>
@@ -15,35 +15,34 @@
                 <div class="row mb-4">
                     <div class="col">
                         <div class="form-outline">
-                            <input type="text" name="fname" id="frstname" class="form-control" value="<%= customer.fname %>" required />
-                            <label class="form-label" for="frstname" >First Name</label>
+                            <input type="text" name="fname" id="frstname" class="form-control" required />
+                            <label class="form-label" for="frstname">First Name</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-outline">
-                            <input type="text" name="lname" id="lstname" class="form-control" value="<%= customer.lname %>" required />
-                            <label class="form-label" for="lstname" >Last Name</label>
+                            <input type="text" name="lname" id="lstname" class="form-control" required />
+                            <label class="form-label" for="lstname">Last Name</label>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Email input -->
                 <div class="form-outline mb-4 col-md-12">
-                    <input type="email" name="email" id="emailAddress" class="form-control" required value="<%= customer.email %>" />
-                    <label class="form-label" for="emailAddress"  >Email</label>
+                    <input type="email" name="email" id="emailAddress" class="form-control" required />
+                    <label class="form-label" for="emailAddress">Email</label>
                 </div>
                 
                 <!-- Gender input -->
                 <div class="form-outline mb-4 col-md-12">
-                    <input type="gender" name="gender" id="gender" class="form-control" value="<%= customer.gender%>" required />
-                    <label class="form-label" for="gender" >Gender</label>
+                    <input type="gender" name="gender" id="gender" class="form-control" required />
+                    <label class="form-label" for="gender">Gender</label>
                 </div>
 
                 <!-- City dropdown -->
                 <div class="row mb-4">
                     <div class="col ctyDropDown">
-                        <select class="select ctySlctn" id="ctySelection" name="citySel" value="<%= customer.city %>" required>
-                            <option selected> <%= customer.city %> </option>
+                        <select class="select ctySlctn" id="ctySelection" name="city" required>
                             <option value="Ajax">Ajax</option>
                             <option value="Brampton">Brampton</option>
                             <option value="Guelph">Guelph</option>
@@ -63,15 +62,9 @@
                         <label class="form-label select-label">City</label>
                     </div>
                 <!-- Birthday input -->
-
-                <% let bDay=customer.birthday.toLocaleDateString("fr-CA", 
-                { year: "numeric" ,
-                 month: "2-digit" , 
-                 day: "2-digit" , });%>
-
                 <div class="col">
                         <div class="form-outline" data-mdb-format="yyyy/mm/dd" data-mdb-inline="true">
-                            <input type="date" name="birthday" class="form-control" id="bdayPicker" value="<%= bDay%>" required />
+                            <input type="date" name="birthday" class="form-control" id="bdayPicker" required />
                             <label for="bdayPicker" class="form-label">Birthday</label>
                         </div>
                     </div>
