@@ -1,0 +1,83 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form method="POST" class="mt-5 p-4 regForm">
+                <h3 class="text-center mb-4">Add Customer</h3>
+                
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="text" name="fname" id="frstname" class="form-control" required />
+                            <label class="form-label" for="frstname">First Name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="text" name="lname" id="lstname" class="form-control" required />
+                            <label class="form-label" for="lstname">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Email input -->
+                <div class="form-outline mb-4 col-md-12">
+                    <input type="email" name="email" id="emailAddress" class="form-control" required />
+                    <label class="form-label" for="emailAddress">Email</label>
+                </div>
+                
+                <!-- Gender input -->
+                <div class="form-outline mb-4 col-md-12">
+                    <input type="gender" name="gender" id="gender" class="form-control" required />
+                    <label class="form-label" for="gender">Gender</label>
+                </div>
+
+                <!-- City dropdown -->
+                <div class="row mb-4">
+                    <div class="col ctyDropDown">
+                        <select class="select ctySlctn" id="ctySelection" name="citySel" required>
+                            <option value="Ajax">Ajax</option>
+                            <option value="Brampton">Brampton</option>
+                            <option value="Guelph">Guelph</option>
+                            <option value="Hamilton">Hamilton</option>
+                            <option value="Kitchener">Kitchener</option>
+                            <option value="London">London</option>
+                            <option value="Markham">Markham</option>
+                            <option value="Mississauga">Mississauga</option>
+                            <option value="Niagara Falls">Niagara Falls</option>
+                            <option value="Ottawa">Ottawa</option>
+                            <option value="Pickering">Pickering</option>
+                            <option value="Scarborough">Scarborough</option>
+                            <option value="Sudbury">Sudbury</option>
+                            <option value="Toronto">Toronto</option>
+                            <option value="Vaughan">Vaughan</option>
+                        </select>
+                        <label class="form-label select-label">City</label>
+                    </div>
+                <!-- Birthday input -->
+                <div class="col">
+                        <div class="form-outline" data-mdb-format="yyyy/mm/dd" data-mdb-inline="true">
+                            <input type="date" name="birthday" class="form-control" id="bdayPicker" required />
+                            <label for="bdayPicker" class="form-label">Birthday</label>
+                        </div>
+                    </div>
+                </div>
+
+              <a href="/customer-list" > <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-edit"></i> Submit</button> </a> 
+              <a href="/customer-list" class="btn btn-warning">
+                  <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+
+
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>

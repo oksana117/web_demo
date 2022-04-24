@@ -1,0 +1,47 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form method="POST" class="mt-5 p-4 regForm">
+                <h3 class="text-center mb-4">Add Customer</h3>
+                
+                
+                <!-- Email input -->
+                <div class="form-outline mb-4 col-md-12">
+                    <input type="email" name="email" id="emailAddress" class="form-control" required />
+                    <label class="form-label" for="emailAddress">Email</label>
+                </div>
+                
+                <!-- Gender input -->
+                <div class="form-outline mb-4 col-md-12">
+                    <input type="gender" name="gender" id="gender" class="form-control" required />
+                    <label class="form-label" for="gender">Gender</label>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+              <a href="/customer-list" > <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-edit"></i> Submit</button> </a> 
+              <a href="/customer-list" class="btn btn-warning">
+                  <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+
+
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>
