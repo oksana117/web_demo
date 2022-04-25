@@ -35,7 +35,7 @@
                
 
                 <% for(let count = 0; count <CustomerList.length; count++) { %>
-                <%CustomerList.sort((a,b)=> (a.lastName < b.lastName)*-1);%> 
+                <%CustomerList.sort((a,b)=> (a.lastName - a.lastName));%> 
                   <tr>
                        <td class="text-center col-1"><%= CustomerList[count].lastName %> </td>
                        <td class="text-center col-1"><%= CustomerList[count].firstName %></td>
