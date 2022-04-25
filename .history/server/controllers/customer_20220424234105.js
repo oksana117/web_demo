@@ -69,14 +69,14 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             
-            res.render('customer/edit', {title: 'Edit Customer Information', customer: customerToEdit})
+            res.render(' customer/edit', {title: 'Edit Customer Information', customer: customerToEdit})
         }
     });
 }
 
 
 
-module.exports.processEditPage =  (req, res, next) => {
+module.exports.processEditPage =  async (req, res, next) => {
     let id = req.params.id
 
     let updatedCustomer = Customer({
@@ -90,7 +90,7 @@ module.exports.processEditPage =  (req, res, next) => {
       
     });
 
-   
+    let customer = await.Customer
     
     Customer.updateOne({_id: id}, updatedCustomer, {}, (err) => {
         if(err)

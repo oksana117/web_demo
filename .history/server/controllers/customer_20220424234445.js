@@ -69,7 +69,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             
-            res.render('customer/edit', {title: 'Edit Customer Information', customer: customerToEdit})
+            res.render(' customer/edit', {title: 'Edit Customer Information', customer: customerToEdit})
         }
     });
 }
